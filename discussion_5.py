@@ -78,7 +78,7 @@ class TestAllMethods(unittest.TestCase):
 
 	## Check to see whether you can add an item to the warehouse
 	def test_add_item(self):
-		super().add_item(self.item1)
+		Warehouse.add_item(self.item1)
 		self.assertEqual(self.items[0], self.item1)
 
 
