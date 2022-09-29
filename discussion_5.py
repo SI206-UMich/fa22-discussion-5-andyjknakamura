@@ -38,11 +38,15 @@ class Warehouse:
 
 	# Adds an item to the warehouse	
 	def add_item(self, item):
-		pass
+		self.items.append(item)
 
 	# Returns the item in the warehouse with the most stock		
 	def get_max_stock(self):
-		pass
+		max_value = 0
+		for i in range(len(self.items)):
+			if self.items[i] > self.items[i - 1]:
+				max_value = self.items[i]
+		return max_value
 	
 	# Returns the item in the warehouse with the highest price
 	def get_max_price(self):
